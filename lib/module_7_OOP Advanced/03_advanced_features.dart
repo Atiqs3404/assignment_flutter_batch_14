@@ -20,11 +20,24 @@ class Response {
   }
 }
 
+class Nationality {
+  Nationality({String? country, String? city})
+    : _country = country,
+      _city = city;
+
+  String? _country;
+  String? _city;
+}
+
 class Person {
-  Person({String? name, int? age}) : _name = name, _age = age;
+  Person({String? name, int? age, Nationality? nationality})
+    : _name = name,
+      _age = age,
+      _nationality = nationality;
 
   String? _name;
   int? _age;
+  Nationality? _nationality;
 
   String get name => _name ?? "No name provided";
   int get age => _age ?? 0;
@@ -49,7 +62,7 @@ void main() {
   // print(person.name); // Null as new instance is created
   // print(person.age); // 26
 
-  // After 1 year with copy constructor
+  // After 1 year with copy constructor (changes hashcode but keeps previous values if not provided)
   person = person.copyWith(newAge: 30);
   print(person.name); // Doe
   print(person.age); // 30
