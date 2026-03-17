@@ -29,8 +29,8 @@ You can write text across multiple lines.''';
   // String case conversion methods
   print('\nString Case Conversion Example:');
   String upperCase = name.toUpperCase(); // Converts all characters to uppercase
-  String lowerCase =
-      greeting.toLowerCase(); // Converts all characters to lowercase
+  String lowerCase = greeting
+      .toLowerCase(); // Converts all characters to lowercase
   print('Uppercase Name: $upperCase');
   print('Lowercase Greeting: $lowerCase');
 

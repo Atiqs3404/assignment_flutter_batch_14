@@ -50,9 +50,7 @@ void main() {
   final dog = Dog("Buddy");
 
   dog.eat();
-
-  final dogsound = dog.makesound();
-  print(dogsound);
+  print(dog.makesound());
 
   // Class exercise (15 minutes)
   final myCar = Car("Toyota", "Corolla");

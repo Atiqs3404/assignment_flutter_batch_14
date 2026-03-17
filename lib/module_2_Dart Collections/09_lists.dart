@@ -173,7 +173,7 @@ void main() {
   List<List<int>> matrix = [
     [1, 2, 3],
     [4, 5, 6],
-    [7, 8, 9]
+    [7, 8, 9],
   ];
 
   print('Matrix:');
@@ -186,7 +186,7 @@ void main() {
 
   /// Modifying 2D list
   matrix[0][0] = 100;
-  print('After modification: ${matrix[0]}');
+  print('After modification row 0: ${matrix[0]}');
 
   /// Iterating 2D list with nested loops
   print('\nIterating with nested loops:');
@@ -201,7 +201,7 @@ void main() {
   List<List<dynamic>> studentGrades = [
     ['Alice', 85, 90, 92],
     ['Bob', 78, 85, 88],
-    ['Charlie', 92, 95, 89]
+    ['Charlie', 92, 95, 89],
   ];
 
   for (var student in studentGrades) {
@@ -216,12 +216,12 @@ void main() {
   List<List<List<int>>> cube = [
     [
       [1, 2],
-      [3, 4]
+      [3, 4],
     ],
     [
       [5, 6],
-      [7, 8]
-    ]
+      [7, 8],
+    ],
   ];
 
   print('3D Cube structure:');
@@ -242,20 +242,20 @@ void main() {
       'product': 'Laptop',
       'price': 1200.00,
       'quantity': 1,
-      'specs': ['16GB RAM', '512GB SSD', 'Intel i7']
+      'specs': ['16GB RAM', '512GB SSD', 'Intel i7'],
     },
     {
       'product': 'Mouse',
       'price': 25.00,
       'quantity': 2,
-      'specs': ['Wireless', 'Ergonomic', '1600 DPI']
+      'specs': ['Wireless', 'Ergonomic', '1600 DPI'],
     },
     {
       'product': 'Keyboard',
       'price': 75.00,
       'quantity': 1,
-      'specs': ['Mechanical', 'RGB', 'Wireless']
-    }
+      'specs': ['Mechanical', 'RGB', 'Wireless'],
+    },
   ];
 
   double total = 0;

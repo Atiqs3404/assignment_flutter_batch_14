@@ -43,31 +43,31 @@
 
 /// Do-While Loop – Menu Simulation
 /// Please run this from terminal using dart run <file_name.dart> command
-// import 'dart:io';
+import 'dart:io';
 
-// void main() {
-//   String? choice;
+void main() {
+  String? choice;
 
-//   do {
-//     print('--- Simple Menu ---');
-//     print('1. Say Hello');
-//     print('2. Say Goodbye');
-//     print('3. Exit');
+  do {
+    print('--- Simple Menu ---');
+    print('1. Say Hello');
+    print('2. Say Goodbye');
+    print('3. Exit');
 
-//     print('Enter your choice: ');
-//     choice = stdin.readLineSync();
+    print('Enter your choice: ');
+    choice = stdin.readLineSync();
 
-//     if (choice == '1') {
-//       print('Hello!');
-//     } else if (choice == '2') {
-//       print('Goodbye!');
-//     } else if (choice != '3') {
-//       print('Invalid choice, try again.');
-//     }
-//   } while (choice != '3');
+    if (choice == '1') {
+      print('Hello!');
+    } else if (choice == '2') {
+      print('Goodbye!');
+    } else if (choice != '3') {
+      print('Invalid choice, try again.');
+    }
+  } while (choice != '3');
 
-//   print('Program ended.');
-// }
+  print('Program ended.');
+}
 
 /// Nested Loops Example
 // void main() {
@@ -97,4 +97,3 @@
 //     print('Odd Number: $i');
 //   }
 // }
-

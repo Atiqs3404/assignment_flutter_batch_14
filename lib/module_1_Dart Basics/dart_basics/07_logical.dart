@@ -9,14 +9,18 @@ void main() {
   bool isAdult = true;
 
   bool canDrive = hasLicense && isAdult;
-  print('AND Operator: Can drive? $canDrive'); // Output: true (both are true)
+  print(
+    'AND Operator: Can drive? ${canDrive ? "Yes" : "No"}',
+  ); // Output: true (both are true)
 
   // Example where one condition is false
   bool hasTicket = true;
   bool hasID = false;
 
   bool canEnter = hasTicket && hasID;
-  print('Can enter? $canEnter'); // Output: false (one is false)
+  print(
+    'Can enter? ${canEnter ? "Yes" : "No"}',
+  ); // Output: false (one is false)
 
   // 2. OR Operator (||)
   // Returns true if AT LEAST ONE condition is true
@@ -25,21 +29,26 @@ void main() {
 
   bool canPay = hasCard || hasCash;
   print(
-      '\nOR Operator: Can pay? $canPay'); // Output: true (at least one is true)
+    '\nOR Operator: Can pay? ${canPay ? "Yes" : "No"}',
+  ); // Output: true (at least one is true)
 
   // Example where both are false
   bool isSunday = false;
   bool isSaturday = false;
 
   bool isWeekend = isSaturday || isSunday;
-  print('Is weekend? $isWeekend'); // Output: false (both are false)
+  print(
+    'Is weekend? ${isWeekend ? "Yes" : "No"}',
+  ); // Output: false (both are false)
 
   // Example where both are true
   bool hasPhoneAvailable = true;
   bool hasLaptopAvailable = true;
 
   bool hasDeviceAvailable = hasPhoneAvailable || hasLaptopAvailable;
-  print('Has device? $hasDeviceAvailable'); // Output: true (both are true)
+  print(
+    'Has device? ${hasDeviceAvailable ? "Yes" : "No"}',
+  ); // Output: true (both are true)
 
   // 3. NOT Operator (!)
   // Reverses the boolean value (true becomes false, false becomes true)
@@ -47,11 +56,14 @@ void main() {
 
   bool isSunny = !isRaining;
   print(
-      '\nNOT Operator: Is sunny? $isSunny'); // Output: true (opposite of false)
+    '\nNOT Operator: Is sunny? ${isSunny ? "Yes" : "No"}',
+  ); // Output: true (opposite of false)
 
   bool isOnline = true;
   bool isOffline = !isOnline;
-  print('Is offline? $isOffline'); // Output: false (opposite of true)
+  print(
+    'Is offline? ${isOffline ? "Yes" : "No"}',
+  ); // Output: false (opposite of true)
 
   // 4. Combining AND and OR
   // You can use multiple logical operators together
@@ -60,23 +72,31 @@ void main() {
 
   // Check if person is adult (18+) AND has permission
   bool canAccess = (age >= 18) && hasPermission;
-  print('\nCombining operators: Can access? $canAccess'); // Output: true
+  print(
+    '\nCombining operators: Can access? ${canAccess ? "Yes" : "No"}',
+  ); // Output: true
 
   // Check if person is child (under 12) OR senior (over 60)
   bool getsDiscount = (age < 12) || (age > 60);
-  print('Gets discount? $getsDiscount'); // Output: false (age is 25)
+  print(
+    'Gets discount? ${getsDiscount ? "Yes" : "No"}',
+  ); // Output: false (age is 25)
 
   // 5. Real-world example: Login system
   String username = 'admin';
   String password = '1234';
 
   bool isValidUser = (username == 'admin') && (password == '1234');
-  print('\nLogin example: Is valid user? $isValidUser'); // Output: true
+  print(
+    '\nLogin example: Is valid user? ${isValidUser ? "Yes" : "No"}',
+  ); // Output: true
 
   // Wrong password example
   String wrongPassword = 'wrong';
   bool isValidUser2 = (username == 'admin') && (wrongPassword == '1234');
-  print('Is valid user with wrong password? $isValidUser2'); // Output: false
+  print(
+    'Is valid user with wrong password? ${isValidUser2 ? "Yes" : "No"}',
+  ); // Output: false
 
   // 6. Real-world example: Eligibility check
   int studentAge = 16;
@@ -86,7 +106,8 @@ void main() {
   bool canParticipate =
       (studentAge >= 18) || (studentAge >= 16 && hasParentConsent);
   print(
-      '\nEligibility example: Can participate? $canParticipate'); // Output: true
+    '\nEligibility example: Can participate? ${canParticipate ? "Yes" : "No"}',
+  ); // Output: true
 
   // 7. Using NOT with other operators
   int score = 45;
@@ -94,7 +115,8 @@ void main() {
   bool isFailing = !isPassing;
 
   print(
-      '\nUsing NOT: Is failing? $isFailing'); // Output: true (opposite of false)
+    '\nUsing NOT: Is failing? ${isFailing ? "Yes" : "No"}',
+  ); // Output: true (opposite of false)
 
   // 8. Truth table for AND (&&)
   print('\nTruth table for AND (&&):');
@@ -102,10 +124,10 @@ void main() {
   bool andResult2 = true && false;
   bool andResult3 = false && true;
   bool andResult4 = false && false;
-  print('true && true = $andResult1'); // Output: true
-  print('true && false = $andResult2'); // Output: false
-  print('false && true = $andResult3'); // Output: false
-  print('false && false = $andResult4'); // Output: false
+  print('true && true = ${andResult1 ? "Yes" : "No"}'); // Output: true
+  print('true && false = ${andResult2 ? "Yes" : "No"}'); // Output: false
+  print('false && true = ${andResult3 ? "Yes" : "No"}'); // Output: false
+  print('false && false = ${andResult4 ? "Yes" : "No"}'); // Output: false
 
   // 9. Truth table for OR (||)
   print('\nTruth table for OR (||):');
@@ -113,15 +135,15 @@ void main() {
   bool orResult2 = true || false;
   bool orResult3 = false || true;
   bool orResult4 = false || false;
-  print('true || true = $orResult1'); // Output: true
-  print('true || false = $orResult2'); // Output: true
-  print('false || true = $orResult3'); // Output: true
-  print('false || false = $orResult4'); // Output: false
+  print('true || true = ${orResult1 ? "Yes" : "No"}'); // Output: true
+  print('true || false = ${orResult2 ? "Yes" : "No"}'); // Output: true
+  print('false || true = ${orResult3 ? "Yes" : "No"}'); // Output: true
+  print('false || false = ${orResult4 ? "Yes" : "No"}'); // Output: false
 
   // 10. Truth table for NOT (!)
   print('\nTruth table for NOT (!):');
-  print('!true = ${!true}'); // Output: false
-  print('!false = ${!false}'); // Output: true
+  print('!true = ${!true ? "Yes" : "No"}'); // Output: false
+  print('!false = ${!false ? "Yes" : "No"}'); // Output: true
 
   // 11. Complex condition example
   int temperature = 25;
@@ -129,7 +151,9 @@ void main() {
 
   // Good weather: temperature between 20-30 AND not raining
   bool isGoodWeather = (temperature >= 20 && temperature <= 30) && !isRainy;
-  print('\nWeather example: Is good weather? $isGoodWeather'); // Output: true
+  print(
+    '\nWeather example: Is good weather? ${isGoodWeather ? "Yes" : "No"}',
+  ); // Output: true
 
   // 12. Using parentheses for clarity
   // Parentheses make complex conditions easier to read
@@ -139,15 +163,15 @@ void main() {
 
   // Without proper grouping, results might be confusing
   bool res1 = cond1 || cond2 && cond3;
-  print('\nWithout parentheses: $res1'); // Output: true
+  print('\nWithout parentheses: ${res1 ? "Yes" : "No"}'); // Output: true
 
   // With parentheses for clarity
   bool res2 = cond1 || (cond2 && cond3);
-  print('With parentheses: $res2'); // Output: true
+  print('With parentheses: ${res2 ? "Yes" : "No"}'); // Output: true
 
   // Different grouping gives different result
   bool res3 = (cond1 || cond2) && cond3;
-  print('Different grouping: $res3'); // Output: true
+  print('Different grouping: ${res3 ? "Yes" : "No"}'); // Output: true
 
   // 13. Practical example: Age group classification
   int personAge = 15;
@@ -157,9 +181,9 @@ void main() {
   bool isAdultPerson = personAge >= 20;
 
   print('\nAge classification (age: $personAge):');
-  print('Is child? $isChild'); // Output: false
-  print('Is teenager? $isTeenager'); // Output: true
-  print('Is adult? $isAdultPerson'); // Output: false
+  print('Is child? ${isChild ? "Yes" : "No"}'); // Output: false
+  print('Is teenager? ${isTeenager ? "Yes" : "No"}'); // Output: true
+  print('Is adult? ${isAdultPerson ? "Yes" : "No"}'); // Output: false
 
   // 14. Practical example: Access control
   bool isEmployeeUser = true;
@@ -169,7 +193,8 @@ void main() {
   // Access granted if: (employee during business hours) OR (manager anytime)
   bool hasAccessRight = (isEmployeeUser && isBusinessHoursNow) || isManagerUser;
   print(
-      '\nAccess control: Has access? $hasAccessRight'); // Output: true (employee during business hours)
+    '\nAccess control: Has access? ${hasAccessRight ? "Yes" : "No"}',
+  ); // Output: true (employee during business hours)
 
   // 15. Short-circuit evaluation
   // && stops checking if first condition is false
@@ -179,9 +204,9 @@ void main() {
   int x = 5;
   // The second part (x > 10) won't be checked because (x < 0) is already false
   bool check1 = (x < 0) && (x > 10);
-  print('Short-circuit AND: $check1'); // Output: false
+  print('Short-circuit AND: ${check1 ? "Yes" : "No"}'); // Output: false
 
   // The second part (x < 0) won't be checked because (x > 0) is already true
   bool check2 = (x > 0) || (x < 0);
-  print('Short-circuit OR: $check2'); // Output: true
+  print('Short-circuit OR: ${check2 ? "Yes" : "No"}'); // Output: true
 }
